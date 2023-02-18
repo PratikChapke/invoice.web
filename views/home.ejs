@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/style.css"  rel="text/style";
+    
+    
+</head>
+<body>
+
+    <div style="width: auto; height: 30px; background-color: orange ;">
+        <span style="font-weight: 600; font-size: 20px; color: black ; margin-left: 20px ;"> <%- title %> "      " click on Buy Now Button and Generete invoice with GST  </span> 
+     </div> 
+
+    <% for (let i of Product_List ) { %>
+    <section style="background-color: #eee;"> 
+  <div class="container mt-2 mb-1">
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-12 col-xl-10">
+        <div class="card shadow-0 border rounded-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                  <img src="https://cdn.shopify.com/s/files/1/0566/3182/0333/files/01_fd1a9689-6cea-4710-9b90-257ee6f44280.webp?v=1656741154"
+                    class="w-100" />
+                  <a href="#!">
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-6">
+
+                <h5> Name : <%= i.Name %> </h5>
+        
+                <p> Product Details : <%= i.Name %> </p>
+                <p> Stocks Available </p>
+                <p> Ratting : ***** </p>
+                
+              </div>
+              <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                <div class="d-flex flex-row align-items-center mb-1">
+                  <h4 class="mb-1 me-1"> MRP : <%= i.MRP %> </h4>
+                  <span class="text-danger"><s>Rs: 40%</s></span>
+                </div>
+                <h6 class="text-success">Free shipping</h6>
+                <div style="background-color: orange; border-radius: 40px; font-size: larger ;" class="d-flex flex-column mt-5">
+                <a style="padding: 20px ; margin: auto; font-weight: 600 ; " href="/home/invoice"> Buy Now </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+</section>
+<% } %>
+
+</body>
+</html>
+
+

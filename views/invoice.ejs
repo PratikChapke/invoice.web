@@ -1,0 +1,61 @@
+<html>
+
+  <head>
+    <script src="https://unpkg.com/pdfjs-dist/build/pdf.min.js"></script>
+    <script src="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js"></script>
+  </head>
+  <title>Invoice Generetor </title>
+
+  <body>
+    <form action="/home/createinvoice" method="post">   
+    <div style="width: auto; height: 30px; background-color: orange ;">
+        <span style="font-weight: 600; font-size: 20px; color: black ; margin-left: 20px ;"> <%- title %> "      " click on Download Button and Generete invoice with GST  </span> 
+     </div> 
+     <form action="/home/createinvoice" method="post">
+  <div class="container mt-2 mb-1">
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-12 col-xl-10">
+        <div class="card shadow-0 border rounded-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                  <img src="https://cdn.shopify.com/s/files/1/0566/3182/0333/files/01_fd1a9689-6cea-4710-9b90-257ee6f44280.webp?v=1656741154"
+                    class="w-100" />
+                  <a href="#!">
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-6">
+                <% if(Product) { %>
+                <h5> Name : <%= Product.Name %> </h5>
+        
+                <p> product Details : <%= Product.Name %> </p>
+                <% } %>
+                <p> Stocks Available </p>
+                <p> Ratting : ***** </p>
+                
+              </div>
+              <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                <div class="d-flex flex-row align-items-center mb-1">
+                    <div style="display: flex ; margin-top: 45px;  flex-direction: column;">
+                        <button type="submit">Create Invoice</button>
+                                                                                                        
+                    </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+</form>
+  </body>
+
+</html>
